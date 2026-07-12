@@ -1,0 +1,461 @@
+here<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Visual & Brand Identity | Mish Selen</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+
+body{
+
+background:#080808;
+color:white;
+overflow-x:hidden;
+
+}
+
+
+/* MOONLIGHT */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:600px;
+height:600px;
+
+background:radial-gradient(circle,#555,transparent 70%);
+
+top:-150px;
+right:-150px;
+
+filter:blur(120px);
+
+animation:move 12s infinite alternate;
+
+z-index:-1;
+
+}
+
+
+@keyframes move{
+
+from{
+transform:translate(0);
+}
+
+to{
+transform:translate(-200px,200px);
+}
+
+}
+
+
+
+/* NAV */
+
+
+.nav{
+
+position:fixed;
+
+top:30px;
+left:40px;
+right:40px;
+
+display:flex;
+
+justify-content:space-between;
+
+z-index:10;
+
+}
+
+
+.logo{
+
+color:#aaa;
+
+}
+
+
+.back{
+
+color:white;
+
+text-decoration:none;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+}
+
+
+
+/* CONTENT */
+
+
+.container{
+
+max-width:900px;
+
+margin:auto;
+
+padding:150px 25px;
+
+}
+
+
+
+h1{
+
+font-size:clamp(2.8rem,6vw,5rem);
+
+letter-spacing:-3px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.intro{
+
+color:#aaa;
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+max-width:750px;
+
+}
+
+
+
+/* SERVICES */
+
+
+.section{
+
+margin-top:120px;
+
+}
+
+
+
+.section h2{
+
+font-size:2.5rem;
+
+margin-bottom:40px;
+
+}
+
+
+
+
+.card{
+
+padding:35px;
+
+margin-bottom:25px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:30px;
+
+backdrop-filter:blur(20px);
+
+transition:.4s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+.card h3{
+
+font-size:1.5rem;
+
+margin-bottom:15px;
+
+}
+
+
+.card p{
+
+color:#aaa;
+
+line-height:1.7;
+
+}
+
+
+
+/* WORK */
+
+
+.work{
+
+margin-top:120px;
+
+}
+
+
+
+.work-item{
+
+padding:25px 0;
+
+border-bottom:1px solid rgba(255,255,255,.12);
+
+font-size:1.2rem;
+
+color:#ddd;
+
+}
+
+
+
+.work-item:hover{
+
+color:white;
+
+padding-left:15px;
+
+transition:.4s;
+
+}
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+text-align:center;
+
+padding:40px;
+
+color:#777;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="nav">
+
+
+<div class="logo">
+
+☾ Mish Selen
+
+</div>
+
+
+<a href="studio.html" class="back">
+
+Back
+
+</a>
+
+
+</div>
+
+
+
+
+<div class="container">
+
+
+
+<h1>
+
+Visual & Brand Identity
+
+</h1>
+
+
+
+<p class="intro">
+
+Creating visual worlds where ideas become identities — combining strategy, aesthetics, and storytelling to build memorable brands.
+
+</p>
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+
+✦ What I Create
+
+</h2>
+
+
+
+<div class="card">
+
+<h3>
+Brand Identity
+</h3>
+
+<p>
+Logo direction, color systems, typography, and visual elements that shape a brand's personality.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Social Media Design
+</h3>
+
+<p>
+Creative content systems designed to create consistency and a strong digital presence.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Packaging & Print Design
+</h3>
+
+<p>
+Aesthetic packaging, stationery, invitations, and print experiences with thoughtful details.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="work">
+
+
+<h2>
+
+✦ Selected Work
+
+</h2>
+
+
+
+<div class="work-item">
+
+Luma Brand Identity
+
+</div>
+
+
+<div class="work-item">
+
+Social Media Kit
+
+</div>
+
+
+<div class="work-item">
+
+Velora Product Packaging
+
+</div>
+
+
+<div class="work-item">
+
+Artful Print Collection
+
+</div>
+
+
+<div class="work-item">
+
+Nova Business Portfolio
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<footer>
+
+© 2026 Mish Selen. All rights reserved.
+
+</footer>
+
+
+
+</body>
+
+</html>
