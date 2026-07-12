@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Creative Orbit | Mish Selen</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+
+body{
+
+background:#080808;
+color:white;
+overflow-x:hidden;
+
+}
+
+
+/* LIGHT */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:600px;
+height:600px;
+
+background:radial-gradient(circle,#555,transparent 70%);
+
+top:-150px;
+right:-150px;
+
+filter:blur(120px);
+
+animation:move 12s infinite alternate;
+
+z-index:-1;
+
+}
+
+
+@keyframes move{
+
+from{
+transform:translate(0);
+}
+
+to{
+transform:translate(-200px,200px);
+}
+
+}
+
+
+/* NAV */
+
+.nav{
+
+position:fixed;
+
+top:30px;
+left:40px;
+right:40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:10;
+
+}
+
+
+.logo{
+
+color:#aaa;
+
+}
+
+
+.back{
+
+text-decoration:none;
+
+color:white;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.2);
+
+backdrop-filter:blur(20px);
+
+}
+
+
+
+/* HERO */
+
+.container{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:150px 25px 80px;
+
+}
+
+
+
+h1{
+
+font-size:clamp(3rem,7vw,6rem);
+
+letter-spacing:-4px;
+
+margin-bottom:30px;
+
+}
+
+
+.intro{
+
+color:#999;
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+max-width:750px;
+
+}
+
+
+
+/* CREATIVE CARDS */
+
+
+.section{
+
+margin-top:100px;
+
+}
+
+
+.section h2{
+
+font-size:2.5rem;
+
+margin-bottom:40px;
+
+}
+
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+
+
+.card{
+
+padding:35px;
+
+height:250px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(25px);
+
+transition:.5s;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-end;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 0 50px rgba(255,255,255,.15);
+
+}
+
+
+
+.icon{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+
+.card h3{
+
+font-size:1.4rem;
+
+margin-bottom:10px;
+
+}
+
+
+.card p{
+
+color:#999;
+
+line-height:1.5;
+
+}
+
+
+
+/* MOCKUPS */
+
+
+.mockup{
+
+margin-top:100px;
+
+}
+
+
+.mock{
+
+height:180px;
+
+margin:25px 0;
+
+border-radius:25px;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,.12),
+rgba(255,255,255,.03)
+);
+
+border:1px solid rgba(255,255,255,.15);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:1.3rem;
+
+color:#aaa;
+
+transition:.5s;
+
+}
+
+
+.mock:hover{
+
+transform:scale(1.03);
+
+color:white;
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+padding:40px;
+
+color:#777;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="nav">
+
+<div class="logo">
+☾ Mish Selen
+</div>
+
+
+<a href="studio.html" class="back">
+Back
+</a>
+
+
+</div>
+
+
+
+
+<div class="container">
+
+
+<h1>
+Access to My Creative Orbit
+</h1>
+
+
+<p class="intro">
+
+A personal universe of experiments, ideas, and digital creations where design, technology, and imagination come together.
+
+</p>
+
+
+
+
+<section class="section">
+
+
+<h2>
+✦ Creative Universe
+</h2>
+
+
+
+<div class="grid">
+
+
+
+<div class="card">
+
+<div class="icon">
+◌
+</div>
+
+<h3>
+Web Experiences
+</h3>
+
+<p>
+Immersive websites and digital journeys designed with creativity.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">
+◇
+</div>
+
+<h3>
+UI/UX Concepts
+</h3>
+
+<p>
+Interface ideas focused on beauty, simplicity, and user experience.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">
+✦
+</div>
+
+<h3>
+AI Creations
+</h3>
+
+<p>
+Exploring AI-powered visuals and modern creative workflows.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="mockup">
+
+
+<h2>
+✦ Visual Showcase
+</h2>
+
+
+<div class="mock">
+Website Mockup
+</div>
+
+
+<div class="mock">
+Mobile App Concept
+</div>
+
+
+<div class="mock">
+Brand Design Preview
+</div>
+
+
+
+</section>
+
+
+
+</div>
+
+
+
+<footer>
+
+© 2026 Mish Selen. All rights reserved.
+
+</footer>
+
+
+
+</body>
+
+</html>
