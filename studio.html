@@ -1,0 +1,1335 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>The Creative Orbit of Mish Selen</title> <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet"> <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#080808;
+color:white;
+overflow-x:hidden;
+
+}
+
+/* MOONLIGHT MOVING BACKGROUND */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:650px;
+height:650px;
+
+background:radial-gradient(circle,#555,transparent 70%);
+
+top:-200px;
+right:-200px;
+
+filter:blur(120px);
+
+animation:moonMove 12s infinite alternate;
+
+z-index:-1;
+
+}
+
+@keyframes moonMove{
+
+from{
+transform:translate(0,0);
+}
+
+to{
+transform:translate(-250px,250px);
+}
+
+}
+
+/* FLOATING STARS */
+
+.star{
+
+position:fixed;
+
+width:5px;
+height:5px;
+
+background:white;
+
+border-radius:50%;
+
+opacity:.4;
+
+animation:stars 8s infinite;
+
+}
+
+.star1{
+
+left:20%;
+top:30%;
+
+}
+
+.star2{
+
+right:25%;
+top:60%;
+
+animation-delay:2s;
+
+}
+
+.star3{
+
+left:70%;
+bottom:25%;
+
+animation-delay:4s;
+
+}
+
+@keyframes stars{
+
+50%{
+
+transform:translateY(-100px) scale(1.5);
+
+}
+
+}
+
+/* TOP NAVIGATION */
+
+.nav{
+
+position:fixed;
+
+top:30px;
+
+left:40px;
+
+right:40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:20;
+
+}
+
+.location{
+
+display:flex;
+
+flex-direction:column;
+
+gap:8px;
+
+font-size:.85rem;
+
+color:#aaa;
+
+}
+
+.location a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+/* MENU BUTTON */
+
+.menu-btn{
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.2);
+
+backdrop-filter:blur(20px);
+
+cursor:pointer;
+
+font-size:22px;
+
+transition:.5s;
+
+}
+
+.menu-btn:hover{
+
+transform:rotate(90deg);
+
+box-shadow:0 0 50px rgba(255,255,255,.5);
+
+}
+
+/* GLASS MENU */
+
+.menu{
+
+position:fixed;
+
+top:100px;
+
+right:40px;
+
+width:270px;
+
+padding:30px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
+
+backdrop-filter:blur(25px);
+
+display:none;
+
+z-index:30;
+
+animation:menuShow .5s;
+
+}
+
+.menu a{
+
+display:block;
+
+color:white;
+
+text-decoration:none;
+
+margin:20px 0;
+
+}
+
+@keyframes menuShow{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:clamp(3rem,7vw,6rem);
+
+font-weight:800;
+
+letter-spacing:-4px;
+
+opacity:0;
+
+animation:reveal 1.5s forwards;
+
+}
+
+.hero p{
+
+margin-top:90px;
+
+max-width:750px;
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+color:#999;
+
+opacity:0;
+
+animation:reveal 1.5s .5s forwards;
+
+}
+
+@keyframes reveal{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+filter:blur(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+filter:blur(0);
+
+}
+
+}
+
+/* ORBIT */
+
+.orbit{
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+border-radius:50%;
+
+border:1px solid rgba(255,255,255,.12);
+
+right:10%;
+
+bottom:15%;
+
+animation:rotateOrbit 15s linear infinite;
+
+}
+
+@keyframes rotateOrbit{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+</style> </head> <body> <div class="star star1"></div>
+
+<div class="star star2"></div>
+ <div class="star star3"></div> <div class="orbit"></div> <!-- NAV --> <div class="nav"> <div class="location"> <span>☾ Pakistan</span> <a href="mailto:Lumigolioo@gmail.com"> ✉ Contact & Inquiries
+
+</a> </div> <div class="menu-btn" onclick="openMenu()">
+
+</div> </div> <!-- MENU --> <div class="menu" id="menu"> <a href="about.html"> About Me</a> <a href="visual-brand.html">
+ Visual & Brand Identity
+ </a>
+ <a href="creative-orbit.html">
+ Access to My Creative Orbit
+ </a> </div> <!-- HERO --> <section class="hero"> <h1> The Creative Orbit of Mish Selen </h1> <p> A space where imagination meets design, and ideas gently transform into meaningful digital and visual experiences. </p> </section>
+ <style> /* FEATURED WORK */ .featured{
+
+padding:120px 8%;
+
+text-align:center;
+
+}
+
+.featured h2{
+
+font-size:clamp(2rem,5vw,3.5rem);
+
+letter-spacing:-2px;
+
+margin-bottom:15px;
+
+}
+
+.featured p{
+
+color:#999;
+
+margin-bottom:60px;
+
+}
+
+.slider{
+
+position:relative;
+
+max-width:900px;
+
+margin:auto;
+
+overflow:hidden;
+
+}
+
+.slides{
+
+display:flex;
+
+transition:0.8s ease;
+
+}
+
+.card{
+
+min-width:100%;
+
+padding:60px 30px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:35px;
+
+backdrop-filter:blur(25px);
+
+}
+
+.card-icon{
+
+font-size:60px;
+
+margin-bottom:25px;
+
+}
+
+.card h3{
+
+font-size:2rem;
+
+margin-bottom:15px;
+
+}
+
+.card span{
+
+color:#999;
+
+}
+
+/* ARROWS */
+
+.arrow{
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.2);
+
+color:white;
+
+font-size:25px;
+
+cursor:pointer;
+
+backdrop-filter:blur(20px);
+
+}
+
+.arrow:hover{
+
+box-shadow:0 0 40px rgba(255,255,255,.4);
+
+}
+
+.left{
+
+left:20px;
+
+}
+
+.right{
+
+right:20px;
+
+}
+
+/* EMPTY SPACE */
+
+.big-space{
+
+height:350px;
+
+}
+
+</style> <!-- FEATURED WORK --> <section class="featured"> <h2> Featured Work
+
+</h2> <p> UI/UX • Web Design </p> <div class="slider"> <button class="arrow left" onclick="moveSlide(-1)">
+ ‹
+ </button> <div class="slides" id="slides"> <div class="card"> <div class="card-icon"> ◌ </div> <h3> Web Design </h3> <span> Modern websites & digital experiences </span> </div> <div class="card"> <div class="card-icon">
+
+</div> <h3> UI/UX Design </h3> <span> Clean interfaces created around users </span> </div> <div class="card"> <div class="card-icon"> ◇
+
+</div> <h3> Creative Interfaces </h3> <span> Visual concepts transformed into experiences </span> </div> </div> <button class="arrow right" onclick="moveSlide(1)">
+›
+</button> </div> </section> <div class="big-space"></div>
+
+<style> /* CONTACT */
+
+.contact{
+
+text-align:center;
+
+padding:100px 20px 50px;
+
+}
+
+.contact h2{
+
+font-size:clamp(2rem,5vw,3rem);
+
+margin-bottom:50px;
+
+letter-spacing:-1px;
+
+}
+
+.contact a{
+
+display:block;
+
+color:white;
+
+text-decoration:none;
+
+margin:18px;
+
+font-size:1.1rem;
+
+transition:.4s;
+
+}
+
+.contact a:hover{
+
+color:#aaa;
+
+}
+
+/* SOCIAL */
+
+.social{
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+margin-top:30px;
+
+}
+
+.social a{
+
+font-size:1rem;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+text-align:center;
+
+padding:40px 20px;
+
+color:#777;
+
+font-size:.9rem;
+
+}
+
+</style> <!-- CONTACT --> <section class="contact"> <h2> Contact </h2> <a href="mailto:Lumigolioo@gmail.com"> ✉ Lumigolioo@gmail.com </a> <div class="social"> <a href="#"> Instagram
+
+</a> <a href="#"> LinkedIn
+
+</a> <a href="#"> Behance
+
+</a> </div> </section> <footer class="footer"> © 2026 Mish Selen. All rights reserved.
+
+</footer> <script> /* MENU */
+
+function openMenu(){
+
+let menu=document.getElementById("menu");
+
+if(menu.style.display==="block"){
+
+menu.style.display="none";
+
+}
+
+else{
+
+menu.style.display="block";
+
+}
+
+}
+
+/* SLIDER */
+
+let current=0;
+
+function moveSlide(direction){
+
+const slides=document.getElementById("slides");
+
+const total=3;
+
+current += direction;
+
+if(current < 0){
+
+current = total-1;
+
+}
+
+if(current >= total){
+
+current=0;
+
+}
+
+slides.style.transform =
+"translateX(-" + (current*100) + "%)";
+
+}
+
+</script> </body> </html><!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>The Creative Orbit of Mish Selen</title> <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet"> <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#080808;
+color:white;
+overflow-x:hidden;
+
+}
+
+/* MOONLIGHT MOVING BACKGROUND */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:650px;
+height:650px;
+
+background:radial-gradient(circle,#555,transparent 70%);
+
+top:-200px;
+right:-200px;
+
+filter:blur(120px);
+
+animation:moonMove 12s infinite alternate;
+
+z-index:-1;
+
+}
+
+@keyframes moonMove{
+
+from{
+transform:translate(0,0);
+}
+
+to{
+transform:translate(-250px,250px);
+}
+
+}
+
+/* FLOATING STARS */
+
+.star{
+
+position:fixed;
+
+width:5px;
+height:5px;
+
+background:white;
+
+border-radius:50%;
+
+opacity:.4;
+
+animation:stars 8s infinite;
+
+}
+
+.star1{
+
+left:20%;
+top:30%;
+
+}
+
+.star2{
+
+right:25%;
+top:60%;
+
+animation-delay:2s;
+
+}
+
+.star3{
+
+left:70%;
+bottom:25%;
+
+animation-delay:4s;
+
+}
+
+@keyframes stars{
+
+50%{
+
+transform:translateY(-100px) scale(1.5);
+
+}
+
+}
+
+/* TOP NAVIGATION */
+
+.nav{
+
+position:fixed;
+
+top:30px;
+
+left:40px;
+
+right:40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:20;
+
+}
+
+.location{
+
+display:flex;
+
+flex-direction:column;
+
+gap:8px;
+
+font-size:.85rem;
+
+color:#aaa;
+
+}
+
+.location a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+/* MENU BUTTON */
+
+.menu-btn{
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.2);
+
+backdrop-filter:blur(20px);
+
+cursor:pointer;
+
+font-size:22px;
+
+transition:.5s;
+
+}
+
+.menu-btn:hover{
+
+transform:rotate(90deg);
+
+box-shadow:0 0 50px rgba(255,255,255,.5);
+
+}
+
+/* GLASS MENU */
+
+.menu{
+
+position:fixed;
+
+top:100px;
+
+right:40px;
+
+width:270px;
+
+padding:30px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
+
+backdrop-filter:blur(25px);
+
+display:none;
+
+z-index:30;
+
+animation:menuShow .5s;
+
+}
+
+.menu a{
+
+display:block;
+
+color:white;
+
+text-decoration:none;
+
+margin:20px 0;
+
+}
+
+@keyframes menuShow{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:clamp(3rem,7vw,6rem);
+
+font-weight:800;
+
+letter-spacing:-4px;
+
+opacity:0;
+
+animation:reveal 1.5s forwards;
+
+}
+
+.hero p{
+
+margin-top:90px;
+
+max-width:750px;
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+color:#999;
+
+opacity:0;
+
+animation:reveal 1.5s .5s forwards;
+
+}
+
+@keyframes reveal{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+filter:blur(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+filter:blur(0);
+
+}
+
+}
+
+/* ORBIT */
+
+.orbit{
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+border-radius:50%;
+
+border:1px solid rgba(255,255,255,.12);
+
+right:10%;
+
+bottom:15%;
+
+animation:rotateOrbit 15s linear infinite;
+
+}
+
+@keyframes rotateOrbit{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+</style> </head> <body> <div class="star star1"></div>
+
+<div class="star star2"></div>
+ <div class="star star3"></div> <div class="orbit"></div> <!-- NAV --> <div class="nav"> <div class="location"> <span>☾ Pakistan</span> <a href="mailto:Lumigolioo@gmail.com"> ✉ Contact & Inquiries
+
+</a> </div> <div class="menu-btn" onclick="openMenu()">
+
+</div> </div> <!-- MENU --> <div class="menu" id="menu"> <a href="about.html"> About Me</a> <a href="visual-brand.html">
+ Visual & Brand Identity
+ </a>
+ <a href="creative-orbit.html">
+ Access to My Creative Orbit
+ </a> </div> <!-- HERO --> <section class="hero"> <h1> The Creative Orbit of Mish Selen </h1> <p> A space where imagination meets design, and ideas gently transform into meaningful digital and visual experiences. </p> </section>
+ <style> /* FEATURED WORK */ .featured{
+
+padding:120px 8%;
+
+text-align:center;
+
+}
+
+.featured h2{
+
+font-size:clamp(2rem,5vw,3.5rem);
+
+letter-spacing:-2px;
+
+margin-bottom:15px;
+
+}
+
+.featured p{
+
+color:#999;
+
+margin-bottom:60px;
+
+}
+
+.slider{
+
+position:relative;
+
+max-width:900px;
+
+margin:auto;
+
+overflow:hidden;
+
+}
+
+.slides{
+
+display:flex;
+
+transition:0.8s ease;
+
+}
+
+.card{
+
+min-width:100%;
+
+padding:60px 30px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:35px;
+
+backdrop-filter:blur(25px);
+
+}
+
+.card-icon{
+
+font-size:60px;
+
+margin-bottom:25px;
+
+}
+
+.card h3{
+
+font-size:2rem;
+
+margin-bottom:15px;
+
+}
+
+.card span{
+
+color:#999;
+
+}
+
+/* ARROWS */
+
+.arrow{
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.2);
+
+color:white;
+
+font-size:25px;
+
+cursor:pointer;
+
+backdrop-filter:blur(20px);
+
+}
+
+.arrow:hover{
+
+box-shadow:0 0 40px rgba(255,255,255,.4);
+
+}
+
+.left{
+
+left:20px;
+
+}
+
+.right{
+
+right:20px;
+
+}
+
+/* EMPTY SPACE */
+
+.big-space{
+
+height:350px;
+
+}
+
+</style> <!-- FEATURED WORK --> <section class="featured"> <h2> Featured Work
+
+</h2> <p> UI/UX • Web Design </p> <div class="slider"> <button class="arrow left" onclick="moveSlide(-1)">
+ ‹
+ </button> <div class="slides" id="slides"> <div class="card"> <div class="card-icon"> ◌ </div> <h3> Web Design </h3> <span> Modern websites & digital experiences </span> </div> <div class="card"> <div class="card-icon">
+
+</div> <h3> UI/UX Design </h3> <span> Clean interfaces created around users </span> </div> <div class="card"> <div class="card-icon"> ◇
+
+</div> <h3> Creative Interfaces </h3> <span> Visual concepts transformed into experiences </span> </div> </div> <button class="arrow right" onclick="moveSlide(1)">
+›
+</button> </div> </section> <div class="big-space"></div>
+
+<style> /* CONTACT */
+
+.contact{
+
+text-align:center;
+
+padding:100px 20px 50px;
+
+}
+
+.contact h2{
+
+font-size:clamp(2rem,5vw,3rem);
+
+margin-bottom:50px;
+
+letter-spacing:-1px;
+
+}
+
+.contact a{
+
+display:block;
+
+color:white;
+
+text-decoration:none;
+
+margin:18px;
+
+font-size:1.1rem;
+
+transition:.4s;
+
+}
+
+.contact a:hover{
+
+color:#aaa;
+
+}
+
+/* SOCIAL */
+
+.social{
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+margin-top:30px;
+
+}
+
+.social a{
+
+font-size:1rem;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+text-align:center;
+
+padding:40px 20px;
+
+color:#777;
+
+font-size:.9rem;
+
+}
+
+</style> <!-- CONTACT --> <section class="contact"> <h2> Contact </h2> <a href="mailto:Lumigolioo@gmail.com"> ✉ Lumigolioo@gmail.com </a> <div class="social"> <a href="#"> Instagram
+
+</a> <a href="#"> LinkedIn
+
+</a> <a href="#"> Behance
+
+</a> </div> </section> <footer class="footer"> © 2026 Mish Selen. All rights reserved.
+
+</footer> <script> /* MENU */
+
+function openMenu(){
+
+let menu=document.getElementById("menu");
+
+if(menu.style.display==="block"){
+
+menu.style.display="none";
+
+}
+
+else{
+
+menu.style.display="block";
+
+}
+
+}
+
+/* SLIDER */
+
+let current=0;
+
+function moveSlide(direction){
+
+const slides=document.getElementById("slides");
+
+const total=3;
+
+current += direction;
+
+if(current < 0){
+
+current = total-1;
+
+}
+
+if(current >= total){
+
+current=0;
+
+}
+
+slides.style.transform =
+"translateX(-" + (current*100) + "%)";
+
+}
+
+</script> </body> </html>
