@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story of Mish Selen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background: #080808;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            overflow-x: hidden;
+            opacity: 0;
+            animation: fadeInPage 1.5s forwards;
+        }
+
+        @keyframes fadeInPage {
+            to { opacity: 1; }
+        }
+
+        /* MOVING LIGHT BACKGROUND (Same as Main Page) */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #343434, transparent 70%);
+            top: -100px;
+            right: -100px;
+            filter: blur(120px);
+            z-index: 1;
+            animation: lightMove 12s infinite alternate;
+        }
+
+        @keyframes lightMove {
+            from { transform: translate(0, 0); }
+            to { transform: translate(-200px, 200px); }
+        }
+
+        /* GLASS CONTAINER */
+        .container {
+            max-width: 750px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px 40px;
+            border-radius: 30px;
+            backdrop-filter: blur(25px);
+            z-index: 2;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+        }
+
+        /* HEADING WITH TEXT REVEAL STYLE */
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 1.1;
+            margin-bottom: 35px;
+            background: linear-gradient(120deg, #ffffff, #888888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* STORY CONTENT */
+        .story-content {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            line-height: 1.8;
+            color: #b0b0b0;
+        }
+
+        .story-content p {
+            margin-bottom: 25px;
+        }
+
+        .story-content strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .highlight-quote {
+            font-style: italic;
+            color: #ffffff;
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            padding-left: 15px;
+            margin: 30px 0;
+        }
+
+        /* BACK BUTTON WITH PORTAL GLOW SYNC */
+        .back-btn-container {
+            margin-top: 40px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #999;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: 0.4s ease;
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: 1px solid transparent;
+        }
+
+        .back-btn:hover {
+            color: #000;
+            background: #ffffff;
+            transform: translateX(-5px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>The Meaning Behind <br>Mish Selen</h1>
+        
+        <div class="story-content">
+            <p><strong>Mish Selen</strong> is more than just a name—it is the universe I chose to represent my dreams, creativity, and the identity I chose to carry through my creative journey.</p>
+            
+            <p><strong>Mish</strong> reflects my own essence—the dreams I hold close, the quiet effort behind every step, and the values, passion, and creativity that shape who I am. It reminds me that every step, no matter how small, leaves a story worth carrying.</p>
+            
+            <p><strong>Selen</strong>, inspired by the moon, symbolizes calmness, hope, and gentle light. Just as the moon quietly shines in every phase, I believe every dream unfolds in its own time and every journey has its own rhythm.</p>
+            
+            <p>No, it isn't a secret code name. It's simply a gentle reminder that every person has the freedom to create their own story, follow their own constellation of dreams, and leave behind a little light wherever life takes them.</p>
+            
+            <p>Mish Selen is my creative space—a place where imagination meets design, ideas become meaningful creations, and every project carries a little piece of who I am.</p>
+            
+            <p>I believe that creativity isn't about being perfect; it's about staying curious, embracing every lesson, and having the courage to keep creating. Every design, every project, and every experience becomes another star in the story I continue to write.</p>
+            
+            <div class="highlight-quote">
+                "May I always create with the quiet grace of moonlight."
+            </div>
+            
+            <p>This name will always remind me where my dreams live, why I chose to create, and the quiet magic of believing in something before the world can see it.</p>
+            
+            <p>Every name carries a story—and this one is mine.</p>
+        </div>
+
+        <div class="back-btn-container">
+            <a href="index.html" class="back-btn">← Back to Orbit</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
